@@ -21,7 +21,7 @@ namespace task_10
             // Singleton - один экземпляр на все приложение
             services.AddSingleton<IDialogService, DialogService>();
 
-            // ТОже самое
+            // ТОже самое или transient чтобы не кешировалось между окнами
             services.AddSingleton<MainViewModel>();
 
             // Window тоже через DI
