@@ -29,7 +29,7 @@ namespace task_10
 
             ServiceProvider = services.BuildServiceProvider();
 
-            // Запуск главного окна
+            // Запуск главного окна и рекурсивный обход с  внедрением
             var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();
         }
