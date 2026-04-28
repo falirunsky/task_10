@@ -18,11 +18,11 @@ namespace task_10
             // Создание IoC контейнера
             var services = new ServiceCollection();
 
-            // Singleton — один экземпляр на все приложение
+            // Singleton - один экземпляр на все приложение
             services.AddSingleton<IDialogService, DialogService>();
 
-            // Transient — новый ViewModel при каждом запросе
-            services.AddTransient<MainViewModel>();
+            // ТОже самое
+            services.AddSingleton<MainViewModel>();
 
             // Window тоже через DI
             services.AddTransient<MainWindow>();
